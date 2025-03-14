@@ -1,0 +1,332 @@
+:root{
+    --font-primary: Sen, sans-serif;
+}
+
+.fontname {
+    font-family: 'Anton', sans-serif;
+    font-size: 35px;
+    font-weight: 500;
+}
+
+.navfont {
+    font-weight: bold;
+}
+
+a:active {
+    background-color: rgb(28, 155, 235)(0, 102, 255)(0, 102, 255);
+    color: rgb(255, 255, 255)(0, 102, 255)(0, 102, 255);
+}
+
+.intro {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: left; /* Center content */
+    text-align: left; /* Center text */
+}
+
+.profile-image-container {
+    width: 100%; /* Make image container full width */
+    display: flex;
+    justify-content: center;
+    background-color: black; /* Black background for image */
+}
+
+.profile-image {
+    width: 250px;
+    height: 250px;
+}
+
+.profile-content {
+    font-family: var(--font-primary);
+    font-weight: bold;
+    font-size: xx-large;
+    padding: 20px;
+    background-image: url("media/bg_black.jpg"); /* Replace with your actual image path */
+    background-size: cover; /* Cover the entire content area */
+    background-repeat: no-repeat; /* Prevent repetition */
+    color: white; /* Ensure text is readable */
+}
+
+.brief{
+    color: white;
+    font-size: 15px;
+    font-family: var(--font-primary);
+}
+
+.workexp{
+    font-family: var(--font-primary);
+    padding: 20px;
+    background: rgb(0, 0, 0);
+}
+
+.no{
+    font-size: 90px;
+}
+
+h6{
+    font-weight: bold;
+}
+
+h1{
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.companyname{
+    font-size: 24px ;
+    font-weight: bold;
+}
+
+#kevellcolor{
+    color: #609bff;
+}
+
+.profilehead{
+    font-size: 30px;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateX(20px); /* Starts left */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+#techskills{
+    background-color: black;
+    padding: 20px;
+}
+
+.skills{
+    display:grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    color: white;
+}
+
+ul.ps,
+ul.ft,
+ul.db {
+    color: #c0d376;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 15px;
+    /* gap bw list points */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.exp{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.contact{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+    background-color: rgb(72, 70, 70);
+    color: white;
+    font-family: var(--font-primary);
+}
+
+.contactme{
+    margin: 10px;
+}
+
+.contactme li{
+    color: whitesmoke;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+.contact h3{
+    font-family: 'Anton', sans-serif;
+    font-size: 35px;
+    /* font-weight: 80 !important; */
+}
+
+#talk{
+    font-weight: bold;
+    font-size: 30px;
+}
+/* For tablets (width > 763px) */
+@media (min-width: 764px) {
+
+    .contact{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+    .no{
+        font-size: 110px;
+    }
+
+    .exp{
+        /* display: grid; */
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+    
+    .skills{
+        /* display:grid; */
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        color: white;
+    }
+
+    .intro {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        text-align: left;
+    }
+
+    .profile-image-container {
+        width: auto; /* Image takes only required width */
+        padding: 0;
+        background-color: black;
+    }
+
+    .profile-image {
+        width: 350px;
+        height: 350px;
+        margin-right: 20px;
+    }
+
+    .profile-content {
+        font-size: 30px;
+        padding: 30px;
+        min-width: 200px; 
+    }
+
+    .profilehead{
+        font-size: 25px;
+    }
+
+    #talk{
+        font-size: 30px;
+    }
+}
+
+/* For desktops (width > 1024px) */
+@media (min-width: 1024px) {
+    .intro {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .profile-image {
+        width: 480px;
+        height: 500px;
+        margin-right: 20px;
+    }
+
+    .profilehead{
+        font-size: 45px;
+    }
+
+    #talk{
+        font-size: 45px;
+    }
+
+    .profile-content {
+        font-size: 40px;
+        padding: 40px;
+    }
+
+    .skills{
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+        color: white;
+    }   
+}
+
+@media (min-width: 992px) {
+    .profile-content {
+        padding: 30px;
+    }
+}
+
+/* Scroll progress bar container */
+.scroll-progress-bar {
+    position: fixed; /* Fixed at the top of the page */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width of the page */
+    height: 6px; /* Height of the progress bar */
+    background-color: #e0e0e0; /* Light gray background */
+    z-index: 1000; /* Ensure it's above other content */
+  }
+  
+  /* Scroll progress indicator */
+  .scroll-progress {
+    height: 100%; /* Same height as the container */
+    width: 0; /* Initial width (will be updated dynamically) */
+    background-color: #0073e6; /* Blue color for progress */
+    transition: width 0.1s ease; /* Smooth animation for width changes */
+  }
+
+  /* for more page */
+  #projectss{
+    background-color: black;
+    padding: 20px;
+  }
+
+  .projects{
+    display: grid;
+    grid-template-columns: 1fr;
+    font-family: Sen, sans-serif;
+    background-color: black;
+    color: white;
+    gap: 20px;
+  }
+
+  .cmarfproj h3{
+    font-weight: bold;
+  }
+
+  .tanfundproj h3{
+    font-weight: bold;
+  }
+
+  .projectrole{
+    font-weight: bold;
+    color: #c0d376;
+  }
+
+  .custom-bullets {
+    list-style-type: square; /* Square bullets */
+  }
+
+  @media all and (min-width:768px){
+    .projects{
+        grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  /* smooth scroll */
+  html{
+    scroll-behavior: smooth;
+  }
+
+  .nav-link.active{
+    background-color: rgb(9, 220, 213);
+  }
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* To stay above other content */
+    background-color: white; /* Or any color */
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for effect */
+  }
+  
