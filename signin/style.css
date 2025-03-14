@@ -1,0 +1,40 @@
+body {
+    background-color: rgb(233, 230, 131);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+form {
+    font-size: large;
+    font-weight: bold;
+    width: 400px;
+    padding: 20px;
+    background-color: rgb(116, 217, 85);
+    border-radius: 5px;
+    margin: 10vh auto 20px;
+    padding: 20px;
+}
+
+input {
+    float: right;
+    border-radius: 4px;
+}
+
+.btnn {
+    text-align: center;
+}
+
+form button {
+    font-size: 15px;
+    font-weight: bold;
+    width: 30%;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.table{
+    border: 2px solid black;
+    padding: 10px;
+    margin: 10px;
+}
